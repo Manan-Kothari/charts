@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0-rc1
+## 3.0.0-alpha1
 
 This major release consolidates the `kong` and `ingress` chart into a single
 `kong` chart. This chart installs a topology similar to the 0.x `ingress`
