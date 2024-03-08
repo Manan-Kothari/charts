@@ -59,3 +59,7 @@ featureFlags:
 
 # Use this section to change the environment viriables
 env: {}
+
+# Use this section to change the tmp empty dir size
+tmpDir:
+  sizeLimit: 256Mi

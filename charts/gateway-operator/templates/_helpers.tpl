@@ -59,3 +59,14 @@ app.kubernetes.io/instance: "{{ .Release.Name }}"
   value: {{ $val | quote }}
 {{- end -}}
 {{- end -}}
+
+{{- define "kong.volumes" -}}
+- name: {{ template "kong.fullname" . }}-tmp
+  emptyDir:
+    sizeLimit: {{ .Values.tmpDir.sizeLimit }}
+{{- end }}
+
+{{- define "kong.volumeMounts" -}}
+- name: {{ template "kong.fullname" . }}-tmp
+  mountPath: /tmp
+{{- end }}
